@@ -71,32 +71,28 @@ background:#000;
 	float:left;
 	padding-right:30px;
 }
-
 .collection {
 	width:160px;  
 	overflow:hidden;
-  	height: 264px;
+  	height: 274px;
 	margin:5px;
   	float: left;
   	overflow: hidden;
   	position: relative;
-  	color: #222;
 	-webkit-border-bottom-right-radius: 0.8em;
   	-moz-border-radius-bottomright: 0.8em;
   	border-bottom-right-radius: 0.8em;
 	border:3px solid #fff;
-	background-color:#FFF;
+	background-color:#fff;
 }
 .collection.wide{
 width: 336px;
 }
 .collection.long{
 	width:160px;
-	height:546px;
+	height:564px;
 }
-.collection.web       { border-top:5px solid #F00; border-top-color: hsl(   0, 100%, 50%); background-color:#f7dad7;}
-.collection.book  {  border-top:5px solid #F80; border-top-color:hsl(  36, 100%, 50%); background-color:#f6eada;}
-.collection.art      {  border-top:5px solid #08F; border-top-color:hsl( 216, 100%, 50%); background-color:#dde9f9;}
+
 
 .collection * {
   margin: 0;
@@ -106,42 +102,47 @@ width: 336px;
 }
 .collection h2{
 	background-color:#fff;
-	width:150px;
-	height:40px;
+	width:154px;
+	height:50px;
 	text-align:center;
-	font-size:12px;
-	padding:5px;
-	line-height:16px;
+	font-size:13px;
+	padding:8px 3px 0 3px;
+	line-height:18px;
 	font-family:sans-serif;
-	font-weight:normal;
-	letter-spacing:0.15em;
+	font-weight:bold;
+	letter-spacing:0.1em;
 	color:#000;
 	top:225px;
-	-webkit-border-bottom-right-radius: 1.7em;
-    -moz-border-radius-bottomright: 1.7em;
-    border-bottom-right-radius: 1.7em;
-  position: absolute;
+	-webkit-border-bottom-right-radius: 1.3em;
+    -moz-border-radius-bottomright: 1.3em;
+    border-bottom-right-radius: 1.3em;
+  	position: absolute;
 }
-.collection h2.triggered{
-color:#48505a;
-text-shadow: #eaf7f4 1pt 1pt 1pt;
+.collection a{
+	display:block;
+	color:#000;
+	text-decoration:none;	
+}
+.collection h2.triggered a, .collection h2.triggered{
+background-color:#e5ebe6;
+text-shadow:#fff 2px 2px;
 }
 .collection.wide h2{
-	width:327px;
+	width:333px;
 }
 .collection.long h2{
-	top:506px;
-	width:150px;
+	top:515px;
+	width:154px;
 }
 .collection div.details{
 	width:130px;
 	height:130px;
-	top:20px;
+	top:5px;
 	padding:10px;
 	margin:0 0 0 -200px;
 	color:#000;
 	font-family:sans-serif;
-	font-size:13px;
+	font-size:14px;
 	line-height:20px;
 	  position: absolute;
 }
@@ -157,8 +158,12 @@ text-shadow: #eaf7f4 1pt 1pt 1pt;
 	font-style:italic;
 	font-weight:bold;
 }
-.collection h3{
+.collection p.sdate{
 	display:none;
+}
+#options ul{
+	margin:0;
+	padding:0;
 }
 #options li a{
 	background-color:#FFF;

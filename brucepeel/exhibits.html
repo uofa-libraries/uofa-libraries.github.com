@@ -8,238 +8,265 @@
 <body>
   <section id="content">
   	<section id="options">
-      <h2>Filter:</h2>
+      <h2>filter by type:</h2>
       <ul id="filters">
         <li><a href="#collections" data-filter="*">show all</a></li>
+		<li><a href="#web" data-filter=".physical">physical collections</a></li>
         <li><a href="#web" data-filter=".web">web exhibits</a></li>
-        <li><a href="#books" data-filter=".book">the history of the book</a></li>    
 		<li><a href="#new" data-filter=".new">new and current exhibits</a></li>
 		<li><a href="#past" data-filter=".past">past exhibits</a></li>
       </ul>
+<h2>filter by subject:</h2>
+	<ul id="filters">
+		 <li><a href="#books" data-filter=".book">the history of the book</a></li> 
+		 <li><a href="#press" data-filter=".press">small presses</a></li> 
+		<li><a href="#artbooks" data-filter=".artbooks">art books</a></li> 
+		<li><a href="#british" data-filter=".british">british literature</a></li> 
+		<li><a href="#children" data-filter=".children">children's literature</a></li> 
+		<li><a href="#ana" data-filter=".ana">canadiana and americana</a></li>
+		</ul>
       <h2>Sort:</h2>
       <ul id="sort-by">
  		<li><a href="#name">by name</a></li>
-        <li><a href="#type">by start date</a></li>
+        <li><a href="#sdate">by start date</a></li>
       </ul>
   </section>
-  <div id="container">
-	<div class="collection sparrow book">
+  <ul id="container">
+	<li class="collection sparrow press physical">
   		<img src="images/exhibit-images/sparrow.jpg">
 		<h2 class="name">Black Sparrow Press Bibliography</h2>
-		<h3 class="type">1966</h3>
+		<p class="sdate">1966</p>
 		<div class="details">
 			<p>An archive of the small Santa Rosa press.</p><p class="info">1008 records from 1966 to 1970.</p>  
 		</div>
-    </div>
-	<div class="collection dime book">
+    </li>
+	<li class="collection dime physical">
   		<img src="images/exhibit-images/dime.jpg">
 		<h2 class="name">Dime Novels</h2>
-		<h3 class="type">1886</h3>
+		<p class="sdate">1886</p>
 			<div class="details">
 				<p>A sampling of dime novels from ten novel series. </p><p class="info">962 records from 1886 to 1913.</p>  
 			</div>
-    </div>
-	<div class="collection woods wide art">
+    </li>
+	<li class="collection woods wide ana physical">
 		<img src="images/exhibit-images/woods7.jpg">
    	<h2 class="name">Woods Western Americana</h2>
-		<h3 class="type">1933</h3>
+		<p class="sdate">1933</p>
 		<div class="details">
 			<p>A world class collection of western americana. </p><p class="info">Approximately 8000 objects collected between 1933 to 1967.</p>  
 		</div>
-	</div>
-	<div class="collection curwen book">
+	</li>
+	<li class="collection curwen book press physical">
   		<img src="images/exhibit-images/cur1.jpg">
 		<h2 class="name">Curwen Press</h2>
-		<h3 class="type">1916</h3>
+		<p class="sdate">1916</p>
 		<div class="details">
 			<p>A collection of the innovative British press. </p><p class="info">Approximately 1000 objects from 1916 to 1956.</p>  
 		</div>
-    </div>
-	<div class="collection curwen-web web">
-  		<img src="images/exhibit-images/curw.jpg">
-		<h2 class="name">Curwen Press Ephemera</h2>
-		<h3 class="type">1919</h3>
+    </li>
+	<li class="collection curwen-web web press">
+  		<a href="http://exhibits.library.ualberta.ca/streetprint_curwen"><img src="images/exhibit-images/curw.jpg"></a>
+		<h2 class="name"><a href="http://exhibits.library.ualberta.ca/streetprint_curwen">Curwen Press Ephemera</a></h2>
+		<p class="sdate">1919</p>
 		<div class="details">
-			<p>A collection of ephemera from innovative British press. </p><p class="info">Over 2500 objects from 1919 to 1956.</p>  
+			<p><a href="http://exhibits.library.ualberta.ca/streetprint_curwen">A selection of the over 2,500 pieces of ephemera from the innovative British press.</a> </p><p class="info"><a href="http://exhibits.library.ualberta.ca/streetprint_curwen">102 objects from 1919 to 1956.</a></p>  
 		</div>
-    </div>
-	<div class="collection bookplates web">
-  		<img src="images/exhibit-images/bookplates.jpg">
-		<h2 class="name">Bookplates</h2>
-		<h3 class="type">1930</h3>
+    </li>
+	<li class="collection bookplates web">
+  		<a href="http://exhibits.library.ualberta.ca/streetprint_bookplates/"><img src="images/exhibit-images/bookplates.jpg"></a>
+		<h2 class="name"><a href="http://exhibits.library.ualberta.ca/streetprint_bookplates/">Bookplates</a></h2>
+		<p class="sdate">1930</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. </p><p class="info">327 unique plates from the 1930s to the 1970s.</p>  
+				<p><a href="http://exhibits.library.ualberta.ca/streetprint_bookplates/">An ex libris collection representing nearly 100 artists.</a> </p><p class="info"><a href="http://exhibits.library.ualberta.ca/streetprint_bookplates/">327 unique plates from the 1930s to the 1970s.</a></p>  
 			</div>
-    </div>
-	<div class="collection home web">
+    </li>
+	<li class="collection home web artbooks">
   		<img src="images/exhibit-images/home.jpg">
 		<h2 class="name">Books From the Home Museum</h2>
-		<h3 class="type">1960</h3>
+		<p class="sdate">1960</p>
 			<div class="details">
-				<p>Showcases original bookworks made by some of the most influential artists of conceptual art. </p><p class="info">48 books collected between 1960 to 1985.</p>  
+				<p>Showcases the original bookworks made by some of the most influential artists of conceptual art. </p><p class="info">48 books collected between 1960 to 1985.</p>  
 			</div>
-    </div>
-	<div class="collection sargeant wide book">
-		<img src="images/exhibit-images/travel_001_desc.jpg">
-		<h2 class="name">Sarjeant</h2>
-		<h3 class="type">book</h3>
+    </li>
+	<li class="collection sargeant wide book physical">
+		<img src="images/exhibit-images/sarjeant.jpg">
+		<h2 class="name">William A.S. Sarjeant Collection</h2>
+		<p class="sdate">book</p>
 			<div class="details">
 				<p>Made up of several collections, including the Sarjeant History of Science Collection. </p><p class="info">Over 70,000 books.</p>  
 			</div>
-   </div>
-	<div class="collection garden long web">
+   </li>
+	<li class="collection garden long web">
   		<img src="images/exhibit-images/garden.jpg">
 		<h2 class="name">Garden of Delights</h2>
-		<h3 class="type">1787</h3>
+		<p class="sdate">1787</p>
 			<div class="details">
-				<p>Ornamental Plants from Curtis's <em>Botanical Magazine</em>. </p><p class="info">105 images from the from 1787 and later.</p>  
+				<p>Drawings of ornamental Plants from Curtis's <em>Botanical Magazine</em>. </p><p class="info">105 images from the from 1787 and later.</p>  
 			</div>
-    </div>
- 	<div class="collection steele new web">
+    </li>
+ 	<li class="collection steele new web physical">
   		<img src="images/exhibit-images/steele.jpg">
 		<h2 class="name">Sir Sam Steele</h2>
-		<h3 class="type">web</h3>
+		<p class="sdate">web</p>
 			<div class="details">
 				<p>Highlights Steele's major role in the history of the British Empire.</p>  
 			</div>
-    </div>
-	<div class="collection sloper wide web">
+    </li>
+	<li class="collection sloper wide web">
  		<img src="images/exhibit-images/sloper.jpg">
-		<h2 class="name">Ally Sloper</h2>
-		<h3 class="type">1867</h3>
+		<h2 class="name">Sloper, Ally </h2>
+		<p class="sdate">1867</p>
 			<div class="details">
 				<p>A sampling of Sloper’s most memorable antics from Ally Sloper’s <em>Half Holiday</em>. </p><p class="info">327 unique cartoons from the 1867 to the 1916.</p>  
 			</div>
-   </div>
-   	<div class="collection entemology book">
+   </li>
+   	<li class="collection entemology book physical">
 		<img src="images/exhibit-images/ent1.jpg">
-		<h2 class="name">Entomological</h2>
-		<h3 class="type">book</h3>
+		<h2 class="name">Entomology</h2>
+		<p class="sdate">book</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>The Dr Ronald B. Madge Entomology collection contains books of both scientific significance and great aesthetic beauty.</p>
 			</div>
-    </div>
-	<div class="collection entemology long book">
+    </li>
+	<li class="collection diderot long book physical">
 		<img src="images/exhibit-images/did.jpg">
 		<h2 class="name">Diderot &amp; D'Alembert Encyclopédie</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">1776</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p><em>Encyclopédie, ou dictionnaire raisonné des sciences, des arts et des métiers</em> uncut and bound in Dutch marbled paper over pasteboards, with handwritten labels. </p><p class="info">35 folio volumes from 1770 to 1776.</p>  
 			</div>
-    </div>
-	<div class="collection arion wide book">		
+    </li>
+	<li class="collection arion press physical">		
 		<img src="images/exhibit-images/arion.jpg">
 		<h2 class="name">Arion Press</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">1974</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>A selection of publications from America's leading publisher of fine-press books.</p>  
 			</div>
-	</div>
-    <div class="collection salzburg book">
+	</li>
+    <li class="collection salzburg book physical">
 		<img src="images/exhibit-images/sal2.jpg">
 		<h2 class="name">Salzburg</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">1000</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>The original law collection of the Seminary Library of the Archbishop of Salzburg. </p><p class="info">3,500 printed volumes spanning 8 centuries.</p>  
 			</div>
-    </div>
-	<div class="collection postcards past wide art">		
+    </div>d
+	<li class="collection postcards past wide ana physical">		
 		<img src="images/exhibit-images/postcards.jpg">
 		<h2 class="name">Last Best West Postcards</h2>
-		<h3 class="type">zart</h3>
+		<p class="sdate">1900</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>Thousands of images from the first decade of the 20th century preserved in postcards.</p>  
 			</div>
-	</div>
-	<div class="collection victorian book">
+	</li>
+	<li class="collection victorian british children physical">
 		<img src="images/exhibit-images/vic1.jpg">
-    	<h2 class="name">Victorian and Edwardian Fiction</h2>
-		<h3 class="type">book</h3>
+    	<h2 class="name">Victorian Children's Fiction</h2>
+		<p class="sdate">1780</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>The class of fiction held in this collection is distinctive both in content and appearance.</p><p class="info">1780 to the 1870.</p>  
 			</div>
-	</div>
-	<div class="collection bookworks book wide">
+	</li>
+	<li class="collection bookworks book wide artbooks physical">
  		<img src="images/exhibit-images/bookworks.jpg">
 		<h2 class="name">Artists' Books and Bookworks</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">unknown</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>The preeminent collection of artists' books in Canada.</p>  
 			</div>
    </div>
-    <div class="collection dh book">	
+    <li class="collection dh british physical">	
 		<img src="images/exhibit-images/lawrence.jpg">
 		<h2 class="name">D.H. Lawrence: The Eccles</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">1910</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>The core of this collection is 101 volumes by D.H. Lawrence collected by David McAdam Eccles.</p>  
 			</div>
 	 </div>
-	 <div class="collection blake art">	
+	 <li class="collection blake physical">	
 			<img src="images/exhibit-images/blake.jpg">
 			<h2 class="name">William Blake as an Artist</h2>
-			<h3 class="type">zart</h3>
+			<p class="sdate">zart</p>
 				<div class="details">
-					<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+					<p>A collection of Blake's artistry.</p>  
 				</div>
 		 </div>
-		<div class="collection canwom wide web">
+		<li class="collection canwom wide web">
 			<img src="images/exhibit-images/canwom.jpg">
 			<h2 class="name">Canadian Women Artists' Books</h2>
-			<h3 class="type">web</h3>
+			<p class="sdate">1960</p>
 				<div class="details">
-					<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+					<p>A selection of artists' books focusing on books produced in Canada by women.</p><p class="info">62 books from the 1960s to the 1980s.</p>  
 				</div>
 	   </div>
-	<div class="collection minerva book">		
+	<li class="collection minerva press british physical">		
 		<img src="images/exhibit-images/fables.jpg">
 		<h2 class="name">Minerva Press</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">1790</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>The Minerva Press is generally acknowledged as "the greatest single manufactory of fiction during the period". </p><p class="info">1790s to the 1820s.</p>  
 			</div>
-	</div>
-	<div class="collection javitch wide book">		
+	</li>
+	<li class="collection grabhorn book press physical">		
+		<img src="images/exhibit-images/grabhorn.jpg">
+		<h2 class="name">Grabhorn Press</h2>
+		<p class="sdate">1917</p>
+			<div class="details">
+				<p>Ninety-nine per cent of the press output of the Grabhorn Press, San Francisco. </p><p class="info">1200 items from 1917 to 1963.</p>  
+			</div>
+	</li>
+	<li class="collection javitch wide ana physical">		
 		<img src="images/exhibit-images/javitch.jpg">
-		<h2 class="name">Javitch</h2>
-		<h3 class="type">book</h3>
+		<h2 class="name">Gregory Javitch and The Javitch Collection</h2>
+		<p class="sdate">1677</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>This collection on North and South American Aboriginals is one of the finest in Canada. </p><p class="info">More than 2,300 volumes from 1677 to 1943.</p>  
 			</div>
-	</div>
-	<div class="collection bunyan book">		
+	</li>
+	<li class="collection bunyan british physical">		
 		<img src="images/exhibit-images/bunyan.jpg">
 		<h2 class="name">John Bunyan</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">1656</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>It is more difficult to find early editions of Bunyan than of almost any other major English author. </p><p class="info">Over 300 volumes from 1656 to 1794.</p>  
 			</div>
-	</div>
-	<div class="collection james book">		
+	</li>
+	<li class="collection james children british physical">		
 		<img src="images/exhibit-images/james.jpg">
 		<h2 class="name">George James</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">1930</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>An outstanding collection of children's books. </p><p class="info">327 unique plates from the 1930s to the 1970s.</p>  
 			</div>
-	</div>
-	<div class="collection folklore book">		
+	</li>
+	<li class="collection folklore ana web">		
 		<img src="images/exhibit-images/folklore.jpg">
 		<h2 class="name">Alberta Folklore and Local History</h2>
-		<h3 class="type">book</h3>
+		<p class="sdate">unknown</p>
+		<p class="adate">1942</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p>The archival collection includes many aspects of the history, tall tales, humour and stories of Alberta. </p><p class="info">Over 1,000 accessioned items.</p>  
 			</div>
-	</div>
-	<div class="collection fish web wide new">		
-		<img src="images/exhibit-images/fish.jpg">
-		<h2 class="name">History of Fish</h2>
-		<h3 class="type">web</h3>
+	</li>
+	<li class="collection ouvrard web artbooks">		
+		<a href="http://ouvrard.library.ualberta.ca/"><img src="images/exhibit-images/pierre.jpg"></a>
+		<h2 class="name"><a href="http://ouvrard.library.ualberta.ca/">Pierre Ouvrard Virtual Exhibit</a></h2>
+		<p class="sdate">1949</p>
 			<div class="details">
-				<p>The library’s ex libris collection represents nearly 100 artists. 327 unique plates from the 1930s to the 1970s.</p>  
+				<p><a href="http://ouvrard.library.ualberta.ca/">A selection of Ouvrards book bindings chosen to reflect the range that his work encompasses.</a></p>
+				<p class="info"><a href="http://ouvrard.library.ualberta.ca/">150 art bindings from 1949 to 2000.</a></p>  
 			</div>
-	</div>
-  </div>
+	</li>
+	<li class="collection fish web wide new">		
+		<a href="http://exhibits.library.ualberta.ca/streetprint_fish/"><img src="images/exhibit-images/fish.jpg"></a>
+		<h2 class="name"><a href="http://exhibits.library.ualberta.ca/streetprint_fish/">History of Fish</a></h2>
+		<p class="sdate">1847</p>
+			<div class="details">
+				<p><a href="http://exhibits.library.ualberta.ca/streetprint_fish/">Highlights from the personal book collection of Justin Hanisch.</a></p>  
+			</div>
+	</li>
+  </ul>
 
   
   <script src="js/jquery-1.6.1.min.js"></script>
@@ -255,8 +282,8 @@
 			    name : function ( $elem ) {
 			      return $elem.find('.name').text();
 			    },
-			    type : function ( $elem ) {
-			      return $elem.find('.type').text();
+			    sdate : function ( $elem ) {
+			      return $elem.find('.sdate').text();
 			    }
 			  }
 			});
@@ -280,12 +307,12 @@
 			$(this).find('.details').css("margin-left", "-"+w+"px");
 			$(this).find('.details').animate({marginLeft: '5px'}, 400);
 		 	$(this).find('h2').addClass('triggered');
-			$(this).find('img').fadeTo(600, 0.1);
+			$(this).find('img').fadeTo(400, 0.07);
 		}
 		function fout(){ 
 			$(this).find('.details').animate({marginLeft: w }, 400);
 			$(this).find('h2').removeClass('triggered');
-			$(this).find('img').fadeTo(600, 1);
+			$(this).find('img').fadeTo(400, 1);
 
 		}
     });
