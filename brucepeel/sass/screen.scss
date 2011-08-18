@@ -1,0 +1,92 @@
+// Imports -------------------------------------------------------------------
+
+@import "base";
+@import "compass/reset";
+
+/* Layout ------------------------------------------------------------------*/
+body{
+	background-color:#0f120e;
+	font-family:sans-serif;
+}
+a{
+	text-decoration:none;
+}
+.container {
+  @include container;
+  @include susy-grid-background;
+  background-color:#FFF;
+}
+header{
+	@include full;
+	padding-top:40px;
+	h1{
+		@include columns(3,12);
+		font-size:1.3em;
+		font-family:sans-serif;
+		font-weight:normal;	
+	}
+}
+div.lib-logo{
+	@include columns(4,12);
+	@include omega;
+	text-align:right;
+	margin-right:0;
+	em{
+		display:none;
+	}
+}
+nav{
+	@include full;
+	height:340px;
+	ul{
+		@include full;
+		margin:0;
+	}
+	li{
+		@include columns(4,12);
+		background-color:#0f120e;
+		height:340px;
+		&.holdings{
+			background-image:url(../images/holdings.jpg);
+		}
+		&.web{
+			background-image:url(../images/web.jpg);
+		}
+		&.current{
+			background-image:url(../images/current.jpg);
+			margin-right:0;
+		}
+		a{
+			@include columns(2,4);
+			background-color: rgba(255, 255, 255, 0.8);
+			display:block;
+			text-align:center;
+			color:#000;
+			margin:290px 90px 0 90px;
+			padding:10px 0;
+		}
+
+	}
+}
+div.main{
+		@include full;
+		margin-top:50px;
+}
+div.info{
+	@include columns(4,12);
+}
+h2{
+	background-color:#0f120e;
+	color:#fff;
+	width:100%;
+	padding:10px 0;
+}
+div.news{
+	@include columns(8,12);
+	margin-right:0em;
+
+}
+
+footer{
+	@include full;
+}

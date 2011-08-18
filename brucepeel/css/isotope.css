@@ -1,0 +1,181 @@
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+}
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  height: 100%;
+background:#000;
+}
+
+#container {
+  padding: 5px;
+  margin:0 0px 20px 0;
+}
+#options{
+	width:200px;
+	float:left;
+	padding-right:30px;
+}
+
+.collection {
+	width:160px;  
+	overflow:hidden;
+  	height: 264px;
+	margin:5px;
+  	float: left;
+  	overflow: hidden;
+  	position: relative;
+  	color: #222;
+	-webkit-border-bottom-right-radius: 0.8em;
+  	-moz-border-radius-bottomright: 0.8em;
+  	border-bottom-right-radius: 0.8em;
+	border:3px solid #fff;
+	background-color:#FFF;
+}
+.collection.wide{
+width: 336px;
+}
+.collection.long{
+	width:160px;
+	height:546px;
+}
+.collection.web       { border-top:5px solid #F00; border-top-color: hsl(   0, 100%, 50%); background-color:#f7dad7;}
+.collection.book  {  border-top:5px solid #F80; border-top-color:hsl(  36, 100%, 50%); background-color:#f6eada;}
+.collection.art      {  border-top:5px solid #08F; border-top-color:hsl( 216, 100%, 50%); background-color:#dde9f9;}
+
+.collection * {
+  margin: 0;
+}
+.collection img{
+	border:5px solid #000;
+}
+.collection h2{
+	background-color:#fff;
+	width:150px;
+	height:40px;
+	text-align:center;
+	font-size:12px;
+	padding:5px;
+	line-height:16px;
+	font-family:sans-serif;
+	font-weight:normal;
+	letter-spacing:0.15em;
+	color:#000;
+	top:225px;
+	-webkit-border-bottom-right-radius: 1.7em;
+    -moz-border-radius-bottomright: 1.7em;
+    border-bottom-right-radius: 1.7em;
+  position: absolute;
+}
+.collection h2.triggered{
+color:#48505a;
+text-shadow: #eaf7f4 1pt 1pt 1pt;
+}
+.collection.wide h2{
+	width:327px;
+}
+.collection.long h2{
+	top:506px;
+	width:150px;
+}
+.collection div.details{
+	width:130px;
+	height:130px;
+	top:20px;
+	padding:10px;
+	margin:0 0 0 -200px;
+	color:#000;
+	font-family:sans-serif;
+	font-size:13px;
+	line-height:20px;
+	  position: absolute;
+}
+.collection.wide div.details{
+	width:300px;
+	margin-left:-320px;
+}
+.collection div.details p{
+	margin-right:5px;
+	margin-bottom:10px;
+}
+.collection div.details p.info{
+	font-style:italic;
+	font-weight:bold;
+}
+.collection h3{
+	display:none;
+}
+#options li a{
+	background-color:#FFF;
+	color:#000;
+	padding:10px;
+	display:block;
+	border-bottom:1px dotted #333;
+	text-decoration:none;
+}
+#options li a:hover{
+	background-color:#d8e2d6;
+}
+#options h2{
+	color:#fff;
+}
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
