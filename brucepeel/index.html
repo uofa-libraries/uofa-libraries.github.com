@@ -1,43 +1,99 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-<meta charset="utf-8" />
-<title>Bruce Peel Special Collections</title>
-<link rel="stylesheet" href="stylesheets/screen.css" media="screen" />
-</head>
-
+	<head>
+		<title>Bruce Peel Special Collections Library</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/willing.css" type="text/css" media="screen" />
+				<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+	  	<script src="js/jquery-1.6.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		
+		<script type="text/javascript" src="js/supersized.3.2.4.min.js"></script>
+		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+			<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+		
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   10000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	1000,		// Speed of transition
+					start_slide             :   0,
+															   
+					// Components							
+					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'number', 'name', 'blank')
+					slides 					:  	[			// Slideshow Images
+														{image : 'images/bg-images/1.jpg', title : 'The Sam Steele Collection', thumb : 'images/bg-images/1-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/2.jpg', title : 'Our oldest book', thumb : 'images/bg-images/2-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/3.jpg', title : 'The Sam Steele Collection', thumb : 'images/bg-images/3-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/4.jpg', title : 'The Sam Steele Collection', thumb : 'images/bg-images/4-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/5.jpg', title : 'The Woods Collection', thumb : 'images/bg-images/5-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/6.jpg', title : 'Garden of Delights', thumb : 'images/bg-images/6-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/7.jpg', title : 'Arion Press', thumb : 'images/bg-images/7-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/8.jpg', title : 'Postcard Collection', thumb : 'images/bg-images/8-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+													{image : 'images/bg-images/9.jpg', title : 'Sarjeant', thumb : 'images/bg-images/9-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+												]
+					
+				});
+		    });
+		    
+		</script>
+		
+	</head>
 <body>
+<header>
+</header>
+<div id="prevthumb"></div>
+<div id="nextthumb"></div>
 
-<div class="container">
-	<header>
-		<h1>The Bruce Peel Special Collections Library</h1>
-		<div class="lib-logo"><a href="http://www.library.ualberta.ca"><img src="images/lib-logo.jpg" alt="Library Logo" /><em>University of Alberta Libraries</em></a></div>
-	</header>
+<!--Arrow Navigation-->
+<a id="prevslide" class="load-item"></a>
+<a id="nextslide" class="load-item"></a>
 
+<div id="thumb-tray" class="load-item">
+	<div id="thumb-back"></div>
+	<div id="thumb-forward"></div>
+</div>
 
+<!--Time Bar-->
+<div id="progress-back" class="load-item">
+	<div id="progress-bar"></div>
+</div>
+
+<!--Control Bar-->
+<div id="controls-wrapper" class="load-item">
+	<div id="controls">
+		
+	
+		<!--Slide counter-->
+		<div id="slidecounter">
+			<span class="slidenumber"></span> / <span class="totalslides"></span>
+		</div>
+		
+		<!--Slide captions displayed here-->
+		<div id="slidecaption"></div>
+		
+		<!--Thumb Tray button-->
+		<a id="tray-button">show/hide thumbnails</a>
+		
+		<!--Navigation-->
+		<ul id="slide-list"></ul>
+		
+	</div>
+</div>
 <nav>
-<ul>
-	<li class="holdings"><a href="#">major holdings</a></li>
-	<li class="web"><a href="#">web exhibits</a></li>
-	<li class="current"><a href="#">current exhibits</a></li>
-</ul>
 </nav>
-<div class="main">
-<div class='info'>
-<h2>Information</h2>
-<p>this is some information</p>
-</div>
-<div class="news">
-	<h2>News and Updates</h2>
-	<p>this is a blog post</p>
+<main>
+	</main>
+<div id="news">
 </div>
 
 </div>
-<footer>
 
-</footer>
-
-</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <body>
   <section id="content">
   	<section id="options">
-      <h2>filter by type:</h2>
+      <h2>filter by type</h2>
       <ul id="filters">
         <li><a href="#collections" data-filter="*">show all</a></li>
 		<li><a href="#web" data-filter=".physical">physical collections</a></li>
@@ -16,7 +16,7 @@
 		<li><a href="#new" data-filter=".new">new and current exhibits</a></li>
 		<li><a href="#past" data-filter=".past">past exhibits</a></li>
       </ul>
-<h2>filter by subject:</h2>
+<h2>filter by subject</h2>
 	<ul id="filters">
 		 <li><a href="#books" data-filter=".book">the history of the book</a></li> 
 		 <li><a href="#press" data-filter=".press">small presses</a></li> 
@@ -25,12 +25,14 @@
 		<li><a href="#children" data-filter=".children">children's literature</a></li> 
 		<li><a href="#ana" data-filter=".ana">canadiana and americana</a></li>
 		</ul>
-      <h2>Sort:</h2>
-      <ul id="sort-by">
- 		<li><a href="#name">by name</a></li>
-        <li><a href="#sdate">by start date</a></li>
-      </ul>
   </section>
+	<div id="sort">  
+	<h2>sort by</h2>
+    <ul id="sort-by">
+		<li><a href="#name">by name</a></li>
+      <li><a href="#sdate">by start date</a></li>
+    </ul>
+</div>
   <ul id="container">
 	<li class="collection sparrow press physical">
   		<img src="images/exhibit-images/sparrow.jpg">
@@ -151,7 +153,7 @@
 			<div class="details">
 				<p>The original law collection of the Seminary Library of the Archbishop of Salzburg. </p><p class="info">3,500 printed volumes spanning 8 centuries.</p>  
 			</div>
-    </div>d
+    </div>
 	<li class="collection postcards past wide ana physical">		
 		<img src="images/exhibit-images/postcards.jpg">
 		<h2 class="name">Last Best West Postcards</h2>
@@ -302,18 +304,19 @@
 	  		return false;
 		});	
 		$('.collection').hoverIntent(fin,fout);
-		var w = $(this).width();
 		function fin(){  
-			$(this).find('.details').css("margin-left", "-"+w+"px");
-			$(this).find('.details').animate({marginLeft: '5px'}, 400);
-		 	$(this).find('h2').addClass('triggered');
-			$(this).find('img').fadeTo(400, 0.07);
+			$(this).find('.details').animate({marginTop: '52px'},500);
+		 	$(this).find('h2').animate({top:'5px'}, 500);
+			$(this).find('img').fadeTo(500, 0.1);
+			$(this).find('h2').addClass('triggered');
 		}
 		function fout(){ 
-			$(this).find('.details').animate({marginLeft: w }, 400);
+			var h = $(this).height();
+			var h2 = $(this).height()-47;
+			$(this).find('.details').animate({marginTop: h},300);
+			$(this).find('h2').animate({'top': h2}, 300);
+			$(this).find('img').fadeTo(300, 1);
 			$(this).find('h2').removeClass('triggered');
-			$(this).find('img').fadeTo(400, 1);
-
 		}
     });
   </script>    
