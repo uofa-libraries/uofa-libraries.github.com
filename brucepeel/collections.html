@@ -3,9 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <title>Bruce Peel Special Collections - Collections</title>
+  <link rel="stylesheet" href="css/willing.css" />
   <link rel="stylesheet" href="css/isotope.css" />
 </head>
-<body>
+<body class="coll">
+	<header>
+	<h1><a href="index.html"><img src="images/logo.png" alt="Special Collections Library logo"/><em>University of Alberta Bruce Peel Special Collections Library</em></a><h1><p><h2>100,000+ volumes of beautiful, rare and unusual books</br> <a href="collections.html">explore our collections</a><span>::</span> <a href="about.html">more about the library</a></h2>
+	</header>
   <section id="content">
   	<section id="options">
       <h2>filter by type</h2>
@@ -305,15 +309,16 @@
 		});	
 		$('.collection').hoverIntent(fin,fout);
 		function fin(){  
-			$(this).find('.details').animate({marginTop: '52px'},500);
-		 	$(this).find('h2').animate({top:'5px'}, 500);
-			$(this).find('img').fadeTo(500, 0.1);
+		
+		 	$(this).find('h2').animate({top:'5px'}, 400);
+			$(this).find('img').fadeTo(800, 0.1);
 			$(this).find('h2').addClass('triggered');
+				$(this).find('.details').fadeIn(800);
 		}
 		function fout(){ 
 			var h = $(this).height();
 			var h2 = $(this).height()-47;
-			$(this).find('.details').animate({marginTop: h},300);
+			$(this).find('.details').fadeOut(300);
 			$(this).find('h2').animate({'top': h2}, 300);
 			$(this).find('img').fadeTo(300, 1);
 			$(this).find('h2').removeClass('triggered');

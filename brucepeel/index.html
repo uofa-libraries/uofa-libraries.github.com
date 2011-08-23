@@ -29,9 +29,9 @@
 					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'number', 'name', 'blank')
 					slides 					:  	[			// Slideshow Images
 														{image : 'images/bg-images/1.jpg', title : 'The Sam Steele Collection', thumb : 'images/bg-images/1-thumb.jpg', url : 'http://www.library.ualberta.ca'},
-														{image : 'images/bg-images/2.jpg', title : 'Our oldest book', thumb : 'images/bg-images/2-thumb.jpg', url : 'http://www.library.ualberta.ca'},
-														{image : 'images/bg-images/3.jpg', title : 'The Sam Steele Collection', thumb : 'images/bg-images/3-thumb.jpg', url : 'http://www.library.ualberta.ca'},
-														{image : 'images/bg-images/4.jpg', title : 'The Sam Steele Collection', thumb : 'images/bg-images/4-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/2.jpg', title : 'a letter from Lois Reil', thumb : 'images/bg-images/2-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/3.jpg', title : 'Small Presses', thumb : 'images/bg-images/3-thumb.jpg', url : 'http://www.library.ualberta.ca'},
+														{image : 'images/bg-images/4.jpg', title : 'Small Presses', thumb : 'images/bg-images/4-thumb.jpg', url : 'http://www.library.ualberta.ca'},
 														{image : 'images/bg-images/5.jpg', title : 'The Woods Collection', thumb : 'images/bg-images/5-thumb.jpg', url : 'http://www.library.ualberta.ca'},
 														{image : 'images/bg-images/6.jpg', title : 'Garden of Delights', thumb : 'images/bg-images/6-thumb.jpg', url : 'http://www.library.ualberta.ca'},
 														{image : 'images/bg-images/7.jpg', title : 'Arion Press', thumb : 'images/bg-images/7-thumb.jpg', url : 'http://www.library.ualberta.ca'},
@@ -46,54 +46,56 @@
 		
 	</head>
 <body>
-<header>
-</header>
-<div id="prevthumb"></div>
-<div id="nextthumb"></div>
+<div id="left">
+	<header>
+	<h1><a href="index.html"><img src="images/logo.png" alt="Special Collections Library logo"/><em>University of Alberta Bruce Peel Special Collections Library</em></a><h1><p><h2>100,000+ volumes of beautiful, rare and unusual books and artifacts</br> <a href="collections.html">explore our collections</a><span>::</span> <a href="about.html">more about the library</a></h2>
+	</header>
 
-<!--Arrow Navigation-->
-<a id="prevslide" class="load-item"></a>
-<a id="nextslide" class="load-item"></a>
-
-<div id="thumb-tray" class="load-item">
+<div id="thumb-tray" class="load-item"
 	<div id="thumb-back"></div>
 	<div id="thumb-forward"></div>
 </div>
 
-<!--Time Bar-->
-<div id="progress-back" class="load-item">
-	<div id="progress-bar"></div>
-</div>
-
-<!--Control Bar-->
 <div id="controls-wrapper" class="load-item">
 	<div id="controls">
+		<a id="prevslide" class="load-item"></a>
 		
-	
-		<!--Slide counter-->
 		<div id="slidecounter">
 			<span class="slidenumber"></span> / <span class="totalslides"></span>
 		</div>
-		
-		<!--Slide captions displayed here-->
 		<div id="slidecaption"></div>
-		
-		<!--Thumb Tray button-->
 		<a id="tray-button">show/hide thumbnails</a>
-		
-		<!--Navigation-->
-		<ul id="slide-list"></ul>
-		
+				<a id="nextslide" class="load-item"></a>	
 	</div>
 </div>
-<nav>
-</nav>
-<main>
-	</main>
+</div>
+</div>
+<div id="right">
+	<nav>
+		<ul>
+			<li><h3>Hours</h3>Monday to Friday 12pm to 4pm<br/>telephone consultation Monday to Friday 8am to 4pm</li>
+			<li><h3>Location</h3>Rutherford South basement<br/><a href="map">see map</a>
+			<li><h3>Contact</h3>780-492-0987<br/><a href="mailto:info@library.ualberta.ca">info@library.ualberta.ca</a><br/> <a href="contact.html">more contact info</a></li>
+			<li><h3>Terms of Use</h3><p>Material from the collection does not circulate.
+			The resources of the collection are available to all students, staff, and the general public. <br/><a href="terms.html">more terms of use</a></p>
+			<li>
+	</nav>
 <div id="news">
+	<h2>Latest News and Events</h2>
+	<div class="newsstory">	
+		<h3>Sharing Our Collection</h3>
+		<p class="news-info">Aug 16th, 2011 by Lynn McPherson</p>
+		<p><img src="images/news-image.jpg" />Jeff Papineau, a staff member at Bruce Peel Special Collections Library at the University of Alberta, traveled to Calgary in June to set up a display of some items from our Sam Steele holdings.</p>
+	</div>
+	<div class="newsstory">
+	<h3>Portrait of a Canadian Icon</h3>
+	<p class="news-info">Jul 13th, 2011 by Lynn McPherson</p>
+	<p><img src="images/news-image2.jpg" />We have prepared an exhibition highlighting fascinating items from the Steele Collection.  It includes original correspondence, diaries, scrapbooks, military papers, and photographs.</p>
+	</div>
+</div>
 </div>
 
-</div>
+
 
 </body>
 </html>
