@@ -144,6 +144,7 @@ border-bottom:6px solid #e5e6e6;
 	font-size:14px;
 	line-height:20px;
 	  position: absolute;
+	letter-spacing:0px;
 }
 .collection.wide div.details{
 	width:300px;
