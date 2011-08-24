@@ -5,6 +5,7 @@
   <title>Bruce Peel Special Collections - Collections</title>
   <link rel="stylesheet" href="css/willing.css" />
   <link rel="stylesheet" href="css/isotope.css" />
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="coll">
 	<header>
@@ -310,16 +311,16 @@
 		$('.collection').hoverIntent(fin,fout);
 		function fin(){  
 		
-		 	$(this).find('h2').animate({top:'5px'}, 400);
-			$(this).find('img').fadeTo(800, 0.1);
+		 	$(this).find('h2').animate({top:'5px'}, 100);
+			$(this).find('img').delay(100).fadeTo(200, 0.1);
 			$(this).find('h2').addClass('triggered');
-				$(this).find('.details').fadeIn(800);
+				$(this).find('.details').delay(100).fadeIn(200);
 		}
 		function fout(){ 
 			var h = $(this).height();
 			var h2 = $(this).height()-47;
 			$(this).find('.details').fadeOut(300);
-			$(this).find('h2').animate({'top': h2}, 300);
+			$(this).find('h2').animate({'top': h2}, 100);
 			$(this).find('img').fadeTo(300, 1);
 			$(this).find('h2').removeClass('triggered');
 		}
