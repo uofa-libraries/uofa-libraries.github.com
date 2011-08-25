@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <title>Bruce Peel Special Collections - Collections</title>
-  <link rel="stylesheet" href="css/willing.css" />
-  <link rel="stylesheet" href="css/isotope.css" />
+  <link rel="stylesheet" href="css/style.css" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="coll">
 <div id="head">
-	<a href="index.html"><img src="images/logo.png" alt="Special Collections Library logo"/></a><h2 class="filter-title"></h2> 
+	<a href="index.html"><img src="images/logo.png" alt="Special Collections Library logo"/></a><h2 class="filter-title">All Collections and Exhibits</h2> 
 </div>
   <section id="content">
   	<section id="options">
@@ -34,11 +33,20 @@
 	<div id="sort"> 
 	<h2>sort by</h2>
     <ul id="sort-by">
-		<li><a href="#name">by name</a></li>
-      <li><a href="#sdate">by start date</a></li>
+		<li><a href="#">importance</a></li>
+		<li><a href="#name">name</a></li>
+      <li><a href="#sdate">start date</a></li>
     </ul>
 </div>
   <ul id="container">
+	<li class="collection steele new web major ana biggest">
+  		<img src="images/exhibit-images/steele.jpg">
+		<h2 class="name">Sir Sam Steele</h2>
+		<p class="sdate">web</p>
+			<div class="details">
+				<p>Sir Samuel Steele was an icon of the Canadian West.</p> <p>This exhibition highlights his major role in the history of the British Empire through original correspondence, diaries, scrapbooks, military papers and photographs.</p>  
+			</div>
+    </li>
 	<li class="collection sparrow press major">
   		<img src="images/exhibit-images/sparrow.jpg">
 		<h2 class="name">Black Sparrow Press Bibliography</h2>
@@ -109,14 +117,6 @@
 		<p class="sdate">1787</p>
 			<div class="details">
 				<p>Drawings of ornamental Plants from Curtis's <em>Botanical Magazine</em>. </p><p class="info">105 images from the from 1787 and later.</p>  
-			</div>
-    </li>
- 	<li class="collection steele new web major ana">
-  		<img src="images/exhibit-images/steele.jpg">
-		<h2 class="name">Sir Sam Steele</h2>
-		<p class="sdate">web</p>
-			<div class="details">
-				<p>Highlights Steele's major role in the history of the British Empire.</p>  
 			</div>
     </li>
 	<li class="collection sloper wide web">
@@ -284,12 +284,6 @@
 	
 		var $container = $('#container');
 		
-		$('#container').isotope({
-		  masonry : {
-		    columnWidth :1
-		  }
-		});
-		
 		var f=document.URL.split('#')[1];
 		if (f!=undefined){
 			var selector="."+f;
@@ -310,11 +304,12 @@
 		else{
 			var selector='*';
 		}
-		$container.isotope({ filter: selector });
-	
-			
-		$container.isotope({
-			 getSortData : {
+		$container.isotope({ 
+			filter: selector,
+			 masonry : {
+			    columnWidth :1
+			  },
+			getSortData : {
 			    name : function ( $elem ) {
 			      return $elem.find('.name').text();
 			    },
@@ -322,7 +317,8 @@
 			      return $elem.find('.sdate').text();
 			    }
 			  }
-			});
+		});
+
 		
 		$('#sort-by a').click(function(){
 			var sortName = $(this).attr('href').slice(1);
