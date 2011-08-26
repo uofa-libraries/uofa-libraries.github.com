@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/style.css" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body class="coll">
+<body>
 <div id="head">
 	<a href="index.html"><img src="images/logo.png" alt="Special Collections Library logo"/></a><h2 class="filter-title">All Collections and Exhibits</h2> 
 </div>
@@ -31,7 +31,7 @@
 		</ul>
   </section>
 	<div id="sort"> 
-	<h2>sort by</h2>
+	<h2>sort by:</h2>
     <ul id="sort-by">
 		<li><a href="#">importance</a></li>
 		<li><a href="#name">name</a></li>
@@ -372,13 +372,12 @@
 		function fin(){  
 			$(this).find('img').delay(100).fadeTo(200, 0.1);
 			$(this).find('h2').addClass('triggered');
-				$(this).find('.details').delay(100).fadeIn(200);
+			$(this).find('.details').delay(100).fadeIn(200);
 		}
 		function fout(){ 
 			var h = $(this).height();
 			var h2 = $(this).height()-47;
 			$(this).find('.details').fadeOut(300);
-
 			$(this).find('img').fadeTo(300, 1);
 			$(this).find('h2').removeClass('triggered');
 		}
