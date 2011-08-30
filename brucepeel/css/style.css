@@ -1,9 +1,10 @@
 body{
-font-family: 'Lato', sans-serif;
+font-family: 'Couchin', serif;
 font-size:100%;
 line-height:22px;
 letter-spacing:1px;
-background-image:url(../images/little_pulses.png) repeat;
+background:url(../images/black_paper.png) repeat;
+margin:0;
 }
 body.home{
 	overflow:hidden; 
@@ -51,7 +52,7 @@ div#header{
 	height:150px;
 	background-color:#fff;
 	background-color:rgba(255, 255, 255, 0.84);
-	margin-top:40px;
+	margin-top:5%;
 }
 div#header img{
 	margin:45px 0 5px 30px;
@@ -85,10 +86,6 @@ div#header span{
 	padding:0 4px;
 	margin-top:3px;
 }
-div#header h2.filter-title{
-	float:left;
-	margin:150px;	
-}
 #head{
 	width:100%;
 	height:130px;
@@ -100,6 +97,7 @@ div#header h2.filter-title{
 #head h2{
 	font-size:15px;
 	padding-top:74px;
+	color:#fff;
 }
 nav{
 	width:180px;
@@ -114,9 +112,12 @@ text-transform:uppercase;
 	color:#007e10;	
 	padding:13px 10px;
 	display:block;
-	margin-bottom:2px;
-	font-size:0.95em;
+	margin-bottom:3px;
+	font-size:0.85em;
 	font-weight:normal;
+	letter-spacing:1px;
+	font-family: 'Lato', sans-serif;
+
 }
 nav ul li a.first{
 	margin-left:0;
@@ -139,7 +140,7 @@ nav ul li a:hover{
 #general-info ul{
 	margin:0 20%;
 	list-style:none;
-	padding-top:37px;
+margin-top:10.5%;
 	width:60%;
 }
 #general-info ul li{
@@ -148,7 +149,7 @@ nav ul li a:hover{
 
 #general-info ul li a{
 	color:#ffeb98;
-font-size:0.95em;
+font-size:0.9em;
 float:left;
 background-color:#000;
 background-color:rgba(0, 0, 0, 0.5);
@@ -156,6 +157,7 @@ padding:5%;
 margin-bottom:3px;
 display:block;
 width:90%;
+font-weight:normal;
 	}
 #general-info ul li p a{
 	color:#fff4c1;
@@ -163,6 +165,7 @@ width:90%;
 #general-info ul li a:hover{
 	background-color:#333;
 	background-color:rgba(0, 0, 0, 0.2);
+	color:#fff;
 	}
 #general-info ul li p{
 	padding-left:5px;
@@ -272,16 +275,53 @@ a.explore:hover{
 }
 
 /**** Isotope styles ****/
-
-#container {
-background-color:#000;
-margin-top:1em;
-margin-right:1em;
+#header.col{
+	height:65px;
+	margin:30px 0;
 }
-#options{
-	width:200px;
+#header.col img{
+		margin:8px 0 8px 30px;
+}
+#header.col h2{
 	float:left;
-	padding-right:30px;
+	font-size:20px;
+	margin:20px 0 0 30px;
+	font-family:'Lota' sans-serif;
+}
+#container {
+	padding:0 30px;
+
+}
+
+ul.nav-int{
+	float:left;
+	list-style:none;
+	margin:13px 0 0 40px;
+}
+ul.nav-int li{
+	float:right;
+}
+ul.nav-int li a{
+		color:#007e44;
+	font-size:14px;
+	background-color:#fff;
+	display:block;
+	padding:8px;
+	margin-left:2px;
+}
+ul.nav-int li a:hover{
+		background-color:rgba(255, 255, 255, 0.5);
+		color:#000;
+	}
+h2.filters{
+	color:#fff;
+	font-size:20px;
+	margin-left:265px;
+	font-weight:normal;
+}
+ h2.filters span{
+	font-size:16px;
+	font-weight:normal;
 }
 .collection {
 	width:160px;  
@@ -320,12 +360,11 @@ width: 336px;
 	left:5px;
 	height:40px;
 	text-align:center;
-	font-size:13px;
+	font-size:16px;
 	padding:8px 3px 0 3px;
 	line-height:18px;
-	font-family:sans-serif;
 	font-weight:bold;
-	letter-spacing:0.1em;
+	letter-spacing:1px;
 	color:#000;
 	top:225px;
   	position: absolute;
@@ -356,8 +395,7 @@ color:#007e10;
 	padding:5px 10px;
 	display:none;
 	color:#000;
-	font-family:sans-serif;
-	font-size:14px;
+	font-size:15px;
 	line-height:21px;
 	  position: absolute;
 	letter-spacing:0px;
@@ -384,48 +422,50 @@ color:#007e10;
 	display:none;
 }
 #options{
-	margin:0 20px 0 75px;
+	width:200px;
+	background-color:#000;
+	float:left;
+	margin-left:30px;
+	margin-top:-30px;
 }
 #options ul{
-	margin:0;
 	padding:0;
 	list-style:none;
+float:left;
 }
-#options li a{
-	background-color:#FFF;
-	color:#000;
-	padding:10px;
+
+#options li h2{
+		color:#fff;
+		background:#333;
+		font-size:14px;
+		margin:0;
+		font-weight:normal;
+}
+#options li a, #sort-by li a{
+	color:#fff;
+	background-color:#000;
 	display:block;
-	border-bottom:1px dotted #333;
 	text-decoration:none;
+	font-size:14px;
+	padding:5px 10px;
+	float:left;	
+	border-bottom:1px solid #333;
+	width:180px;
 }
 #options li a:hover, #sort-by li a:hover{
-	background-color:#d8e2d6;
+	background-color:#333;
 }
 #options h2{
 	color:#fff;
-	font-size:14px;
-	background-color:#000;
-	padding:5px;
+	font-size:15px;
+	padding:5px;					
+	border-bottom:1px solid #333;
 }
 #sort h2{
-	color:#000;
-	margin:0px 0 10px 0;
+	color:#fff;
 	padding:0;
 	float:left;
 	font-size:15px;
-}
-#sort-by li{
-	list-style:none;
-	display:inline;
-}
-#sort-by li a{
-	padding:10px;
-	background-color:#FFF;
-	color:#000;
-	text-decoration:none;
-	margin-left:2px;
-	font-size:13px;
 }
 
 /* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */

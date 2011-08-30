@@ -7,21 +7,36 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div id="head">
-	<a href="index.html"><img src="images/logo.png" alt="Special Collections Library logo"/></a><h2 class="filter-title">All Collections and Exhibits</h2> 
+
+<div id="header" class="col">
+
+	<a href="index.html"><img src="images/logosm.png" alt="Special Collections Library logo"/></a>
+	<ul class="nav-int">
+	<li><a href="hours.html">Hours and Location</a></li>
+	<li><a href="about.html">About the Library</a></li>
+	<li><a href="contact.html">Contact Us</a></li>
+	<li><a href="terms.html">Policies and Terms of Use</a></li>		
+	<li><a href="links.html">Relevant Links</a></li>
+	</ul>
+
 </div>
   <section id="content">
+		<h2 class="filters">Our Collections - <span class="filter-title">All Collections and Exhibits</span></h2> 
   	<section id="options">
-      <h2>filter by type</h2>
+
+	   
+
       <ul id="filters">
+		<li><h2>type</h2></li>
         <li><a href="#collections" data-filter="*">show all</a></li>
 		<li><a href="#major" data-filter=".major">major holdings</a></li>
         <li><a href="#web" data-filter=".web">web exhibits</a></li>
 		<li><a href="#new" data-filter=".new">new and current exhibits</a></li>
 		<li><a href="#past" data-filter=".past">past exhibits</a></li>
       </ul>
-<h2>filter by subject</h2>
+
 	<ul id="filters">
+		<li><h2>subject</h2></li>
 		 <li><a href="#book" data-filter=".book">the history of the book</a></li> 
 		 <li><a href="#press" data-filter=".press">small presses</a></li> 
 		<li><a href="#artbooks" data-filter=".artbooks">art books</a></li> 
@@ -29,16 +44,16 @@
 		<li><a href="#children" data-filter=".children">children's literature</a></li> 
 		<li><a href="#ana" data-filter=".ana">canadiana and americana</a></li>
 		</ul>
+		 <ul id="sort-by">
+				<li><h2>sort by</h2></li>
+				<li><a href="#">importance</a></li>
+				<li><a href="#name">name</a></li>
+		      <li><a href="#sdate">start date</a></li>
+		    </ul>
   </section>
-	<div id="sort"> 
-	<h2>sort by:</h2>
-    <ul id="sort-by">
-		<li><a href="#">importance</a></li>
-		<li><a href="#name">name</a></li>
-      <li><a href="#sdate">start date</a></li>
-    </ul>
-</div>
+
   <ul id="container">
+
 	<li class="collection steele new web major ana biggest">
   		<img src="images/exhibit-images/steele.jpg">
 		<h2 class="name">Sir Sam Steele</h2>
@@ -49,7 +64,7 @@
     </li>
 	<li class="collection sparrow press major">
   		<img src="images/exhibit-images/sparrow.jpg">
-		<h2 class="name">Black Sparrow Press Bibliography</h2>
+		<h2 class="name">Black Sparrow Press</h2>
 		<p class="sdate">1966</p>
 		<div class="details">
 			<p>An archive of the small Santa Rosa press.</p><p class="info">1008 records from 1966 to 1970.</p>  
@@ -137,7 +152,7 @@
     </li>
 	<li class="collection diderot long book major">
 		<img src="images/exhibit-images/did.jpg">
-		<h2 class="name">Diderot &amp; D'Alembert Encyclopédie</h2>
+		<h2 class="name">Diderot Encyclopédie</h2>
 		<p class="sdate">1776</p>
 			<div class="details">
 				<p><em>Encyclopédie, ou dictionnaire raisonné des sciences, des arts et des métiers</em> uncut and bound in Dutch marbled paper over pasteboards, with handwritten labels. </p><p class="info">35 folio volumes from 1770 to 1776.</p>  
