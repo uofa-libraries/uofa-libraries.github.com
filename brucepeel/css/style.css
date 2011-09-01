@@ -499,6 +499,14 @@ h2 p a:hover{
 	display:block;
 	padding:5px 10px;
 }
+.essay{
+	width:70%;
+	float:left;
+}
+.display-images{
+	width:28%;
+	float:left;
+}
 /* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
