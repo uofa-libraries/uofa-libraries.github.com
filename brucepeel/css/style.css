@@ -14,7 +14,6 @@ body.home{
 a{
 	text-decoration:none;
 	color:#deebe5;
-	letter-spacing:0.1em;
 }
 a:hover{
 	color:#fff4c1;
@@ -296,7 +295,7 @@ a.explore:hover{
 ul.nav-int{
 	float:left;
 	list-style:none;
-	margin:13px 0 0 40px;
+	margin:13px 0 0 32px;
 }
 ul.nav-int li{
 	float:right;
@@ -320,8 +319,9 @@ h2.filters{
 	font-weight:normal;
 }
  h2.filters span{
-	font-size:16px;
+	font-size:25px;
 	font-weight:normal;
+	font-style:italic;
 }
 .collection {
 	width:160px;  
@@ -395,10 +395,9 @@ color:#007e10;
 	padding:5px 10px;
 	display:none;
 	color:#000;
-	font-size:15px;
-	line-height:21px;
+	font-size:1em;
+	line-height:22px;
 	  position: absolute;
-	letter-spacing:0px;
 }
 .collection.wide div.details{
 	width:300px;
@@ -426,7 +425,7 @@ color:#007e10;
 	background-color:#000;
 	float:left;
 	margin-left:30px;
-	margin-top:-30px;
+	margin-top:-50px;
 }
 #options ul{
 	padding:0;
@@ -440,8 +439,9 @@ float:left;
 		font-size:14px;
 		margin:0;
 		font-weight:normal;
+		text-transform:uppercase;
 }
-#options li a, #sort-by li a{
+#options li a{
 	color:#fff;
 	background-color:#000;
 	display:block;
@@ -452,8 +452,9 @@ float:left;
 	border-bottom:1px solid #333;
 	width:180px;
 }
-#options li a:hover, #sort-by li a:hover{
-	background-color:#333;
+#options li a:hover{
+	background-color:#666;	
+	color:#fff4c1;
 }
 #options h2{
 	color:#fff;
@@ -467,7 +468,37 @@ float:left;
 	float:left;
 	font-size:15px;
 }
-
+#sort-by li a{
+	float:left;
+}
+#sort-by{
+	list-style:none;
+}
+h2 p{
+	line-height:0;
+	font-size:15px;
+	padding:0;
+	margin:15px 0 0 0;
+	letter-spacing:auto;
+}
+h2 p a{
+	background-color:#000;
+}
+h2 p a:hover{
+	background-color:#333;
+}
+#collection-main{
+	margin:3% 10%;
+	color:#fff;
+}
+.internal-nav{
+	list-style:none;
+}
+.internal-nav li a{
+	float:left;
+	display:block;
+	padding:5px 10px;
+}
 /* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
