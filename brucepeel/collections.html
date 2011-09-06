@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Bruce Peel Special Collections - Collections</title>
   <link rel="stylesheet" href="css/style.css" />
-<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Judson' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -52,18 +52,18 @@
 
 	<li class="collection steele new web major ana biggest">
   		<img src="images/exhibit-images/steele.jpg">
-		<h2 class="name">Sir Sam Steele</h2>
+		<h2 class="name"><a href="http://steele.library.ualberta.ca/index.html">Sir Sam Steele</a></h2>
 		<p class="sdate">web</p>
 			<div class="details">
 				<p>Sir Samuel Steele was an icon of the Canadian West.</p> <p>This exhibition highlights his major role in the history of the British Empire through original correspondence, diaries, scrapbooks, military papers and photographs.</p>  
 			</div>
     </li>
 	<li class="collection sparrow press major">
-  			<a href="cl/sparrow.html"><img src="images/exhibit-images/sparrow.jpg"></a>
-		<a href="cl/sparrow.html"><h2 class="name">Black Sparrow Press</h2></a>
+  			<img src="images/exhibit-images/sparrow.jpg">
+	<h2 class="name"><a href="cl/sparrow.html">Black Sparrow Press</a></h2>
 		<p class="sdate">1966</p>
 		<div class="details">
-			<p>	<a href="cl/sparrow.html">An archive of the small Santa Rosa press.</a></p><p class="info">	<a href="cl/sparrow.html">1008 records from 1966 to 1970.</a></p>  
+			<p>An archive of the small Santa Rosa press.</p><p class="info">1008 records from 1966 to 1970.</p>  
 		</div>
     </li>
 	<li class="collection dime major">
@@ -392,6 +392,10 @@
 			$(this).find('img').fadeTo(300, 1);
 			$(this).find('h2').removeClass('triggered');
 		}
+		$(".collection").click(function(){
+		     window.location=$(this).find("a").attr("href");
+		     return false;
+		});
     });
   </script>    
   </section> <!-- #content -->

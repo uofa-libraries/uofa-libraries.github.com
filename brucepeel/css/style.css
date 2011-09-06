@@ -1,5 +1,5 @@
 body{
-font-family: 'Couchin', serif;
+font-family: 'Judson', serif;
 font-size:100%;
 line-height:22px;
 letter-spacing:1px;
@@ -295,7 +295,7 @@ a.explore:hover{
 ul.nav-int{
 	float:left;
 	list-style:none;
-	margin:13px 0 0 32px;
+	margin:18px 0 0 32px;
 }
 ul.nav-int li{
 	float:right;
@@ -305,7 +305,7 @@ ul.nav-int li a{
 	font-size:14px;
 	background-color:#fff;
 	display:block;
-	padding:8px;
+	padding:3px 7px;
 	margin-left:2px;
 }
 ul.nav-int li a:hover{
@@ -336,6 +336,7 @@ h2.filters{
   	border-bottom-right-radius: 0.8em;
 	border:3px solid #fff;
 	background-color:#fff;
+	cursor:pointer;
 }
 .collection.wide{
 width: 336px;
@@ -411,7 +412,9 @@ color:#007e10;
 .collection div.details p{
 	margin-right:5px;
 	margin-bottom:10px;
-
+}
+.collection div.details p a{
+	display:block;
 }
 .collection div.details p.info{
 	font-style:italic;
@@ -488,25 +491,57 @@ h2 p a:hover{
 	background-color:#333;
 }
 #collection-main{
-	margin:3% 10%;
+	margin:20px 0 0 65px;
 	color:#fff;
 }
 .internal-nav{
 	list-style:none;
+	background-color:#FFF;
 }
 .internal-nav li a{
 	float:left;
 	display:block;
 	padding:5px 10px;
+	background-color:#FFF;
+	color:#333;
+	margin-right:3px;
 }
-.essay{
+.internal-nav li a:hover{
+	background-color:#fff4c1;
+}
+#essay{
 	width:70%;
 	float:left;
+	line-height:27px;
 }
-.display-images{
-	width:28%;
+#essay h2{
+	font-size:19px;
+	margin:35px 0 0 0;
+	background-color:#000;
+	padding:2px;
+}
+#essay h2 a{
+	float:right;
+	font-size:12px;
+	margin-right:10px;
+}
+#display-images{
+	width:180px;
+	padding:33px 0 0 40px;
 	float:left;
 }
+#display-images div{
+	width:227px;
+	height:227px;
+	background-color:#FFF;
+	margin-bottom:5px;
+	text-align:center;
+	border:10px double #000;
+}
+#collection-main h1{
+	letter-spacing:3px;
+}
+
 /* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
