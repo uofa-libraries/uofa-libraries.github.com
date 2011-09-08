@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @collection.title %>
+</p>
+
+<p>
+  <b>Short Name:</b>
+  <%= @collection.shortname %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @collection.description %>
+</p>
+
+<p>
+  <b>Essay:</b>
+  <%=raw @collection.essay %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%= @collection.subject %>
+</p>
+
+<p>
+  <b>Collection Type:</b>
+  <%= @collection.collectiontype %>
+</p>
+
+<p>
+  <b>Start Year:</b>
+  <%= @collection.startyear %>
+</p>
+
+<p>
+  <b>Acquisition Year:</b>
+  <%= @collection.acquisitionyear %>
+</p>
+<%= image_tag @collection.listimage.url %>
+
+<%= link_to 'Edit', edit_collection_path(@collection) %> |
+<%= link_to 'Destroy', @collection, :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Back', collections_path %>

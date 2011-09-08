@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bruce Peel Special Collections</title>
+  <%= stylesheet_link_tag    "application" %>
+  <!--[if IE 6]><%= stylesheet_link_tag 'ie6' %><![endif]-->
+  <!--[if IE 7]><%= stylesheet_link_tag 'ie7' %><![endif]-->
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+	<link href='http://fonts.googleapis.com/css?family=Judson' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<div id="header" class="col">
+		<a href="http://uofa-libraries.github.com/brucepeel"><%= image_tag "logosm.png", :alt=> "University of Alberta Libraries Logo" %></a>
+		<ul class="nav-int">
+			<li><a href="hours.html">Hours and Location</a></li>
+			<li><a href="about.html">About the Library</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+			<li><a href="terms.html">Policies and Terms of Use</a></li>		
+			<li><a href="links.html">Relevant Links</a></li>
+		</ul>
+	</div>
+
+
+<%= yield %>
+
+<%= link_to 'manage collections', collections_path, :class => "manage" %>
+</body>
+</html>

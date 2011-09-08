@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  essay: MyText
+  subject: MyString
+  collectiontype: MyString
+  startyear: 1
+  acquisitionyear: 1
+
+two:
+  title: MyString
+  description: MyString
+  essay: MyText
+  subject: MyString
+  collectiontype: MyString
+  startyear: 1
+  acquisitionyear: 1

@@ -1,0 +1,152 @@
+
+<section id="content">
+		<h2 class="filters" id="sort-by">Our Collections - <span class="filter-title">All Collections and Exhibits</span>
+				<p>sort by: <a href="#">importance</a> | <a href="#name">name</a> | <a href="#sdate">start date</a></p></h2>
+	<section id="options">
+
+	   
+
+    <ul id="filters">
+		<li><h2>type</h2></li>
+      <li><a href="#collections" data-filter="*">show all</a></li>
+		<li><a href="#major" data-filter=".major">major holdings</a></li>
+      <li><a href="#web" data-filter=".web">web exhibits</a></li>
+		<li><a href="#new" data-filter=".new">new and current exhibits</a></li>
+		<li><a href="#past" data-filter=".past">past exhibits</a></li>
+    </ul>
+
+	<ul id="filters">
+		<li><h2>subject</h2></li>
+		 <li><a href="#book" data-filter=".book">the history of the book</a></li> 
+		 <li><a href="#press" data-filter=".press">small presses</a></li> 
+		<li><a href="#artbooks" data-filter=".artbooks">art books</a></li> 
+		<li><a href="#british" data-filter=".british">british literature</a></li> 
+		<li><a href="#children" data-filter=".children">children's literature</a></li> 
+		<li><a href="#ana" data-filter=".ana">canadiana and americana</a></li>
+	</ul>
+
+</section>
+
+<ul id="container">
+
+<% @collections.each do |collection| %>
+<li class="cols <%= collection.collectiontype %> <%= collection.subject %> <%= collection.listimagesize %>">
+	<%= image_tag collection.listimage.url %>
+	<h2 class="name"><%= link_to collection.title, collection %></h2>
+	<p class="sdate"><%= collection.startyear %></p>
+	<p class="adate"><%= collection.acquisitionyear %></p>
+		<div class="details">
+			<p><%= collection.description %></p>  
+		</div>
+</li>
+ 
+<% end %>
+</ul>
+<script>
+  $(function(){
+	
+		var $container = $('#container');
+		
+		var f=document.URL.split('#')[1];
+		if (f!=undefined){
+			var selector="."+f;
+			if (selector==".web"){
+				var ft="Web Exhibits";
+			}
+			else if (selector==".major"){
+				var ft="Major Holdings";
+			}
+			else if (selector==".other"){
+				var ft="Other Collections";
+			}
+			else if (selector==".new"){
+				var ft="New and Current Exhibits";
+			}
+			$('.filter-title').text(ft);
+		}
+		else{
+			var selector='*';
+		}
+		$container.isotope({ 
+			filter: selector,
+			 masonry : {
+			    columnWidth :1
+			  },
+			getSortData : {
+			    name : function ( $elem ) {
+			      return $elem.find('.name').text();
+			    },
+			    sdate : function ( $elem ) {
+			      return $elem.find('.sdate').text();
+			    }
+			  }
+		});
+
+		
+		$('#sort-by a').click(function(){
+			var sortName = $(this).attr('href').slice(1);
+		 	$container.isotope({ sortBy : sortName });
+			return false;
+		});
+		
+		$('#filters a').click(function(){
+	  		var selector = $(this).attr('data-filter');
+	  		$container.isotope({ filter: selector });
+			if (selector==".web"){
+				var ft="Web Exhibits";
+			}
+			else if (selector==".major"){
+				var ft="Major Holdings";
+			}
+			else if (selector==".other"){
+				var ft="Other Collections";
+			}
+			else if (selector==".new"){
+				var ft="New and Current Exhibits";
+			}
+			else if (selector==".past"){
+				var ft="Past Exhibits";
+			}
+			else if (selector==".book"){
+				var ft="The History of the Book";
+			}
+			else if (selector==".press"){
+				var ft="Small Presses";
+			}
+			else if (selector==".artbooks"){
+				var ft="Art Books";
+			}
+			else if (selector==".children"){
+				var ft="Children's Literature";
+			}
+			else if (selector==".british"){
+				var ft="British Literature";
+			}
+			else if (selector==".ana"){
+				var ft="Canadiana and Americana";
+			}
+			else{
+				var ft="All Collections and Exhibits";
+			}
+		 	$('.filter-title').text(ft);
+	  		return false;
+		});	
+		$('.collection').hoverIntent(fin,fout);
+		function fin(){  
+			$(this).find('img').delay(100).fadeTo(200, 0.1);
+			$(this).find('h2').addClass('triggered');
+			$(this).find('.details').delay(100).fadeIn(200);
+		}
+		function fout(){ 
+			var h = $(this).height();
+			var h2 = $(this).height()-47;
+			$(this).find('.details').fadeOut(300);
+			$(this).find('img').fadeTo(300, 1);
+			$(this).find('h2').removeClass('triggered');
+		}
+		$(".collection").click(function(){
+		     window.location=$(this).find("a").attr("href");
+		     return false;
+		});
+  });
+</script>

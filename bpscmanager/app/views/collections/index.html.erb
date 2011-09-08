@@ -1,0 +1,26 @@
+
+
+<table class="manage-list">
+	<tr>
+		<th>list image</th>
+		<th>title</th>
+		<th>Start Year</th>
+		<th>Acquisition Year</th>
+		<th>Description</th>  
+		<th>Actions</th>
+	</tr>
+
+<% @collections.each do |collection| %>
+<tr>
+	<td><%= image_tag collection.listimage.url %></td>
+	<td><%= link_to collection.title, collection %></td>
+	<td><%= collection.startyear %></td>
+	<td><%= collection.acquisitionyear %></td>
+	<td><%= collection.description %></td>  
+	<td><%= link_to 'Edit', edit_collection_path(collection) %>
+	<%= link_to 'Delete', @collection, :confirm => 'Are you sure?', :method => :delete %></td>
+	 
+</tr>
+ 
+<% end %>
+</table>
